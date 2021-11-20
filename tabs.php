@@ -21,7 +21,6 @@
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
 function create_block_tabs_block_init() {
-	var_dump(__FILE__);
 	register_block_type( __DIR__ , array(
 		'render_callback' => function ( $attribs, $content ){
 			if( !is_admin() ) {
