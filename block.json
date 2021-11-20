@@ -1,0 +1,31 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/tabs",
+	"version": "0.1.0",
+	"title": "Tab Layout",
+	"category": "design",
+	"icon": "index-card",
+	"description": "Display content in a tabbed layout",
+	"supports": {
+		"html": false
+	},
+	"keywords": [ "tab", "tabbed content"],
+	"attributes":{
+		"tabLabelsArray":{
+			"type": "array",
+			"default": []
+		},		
+		"updateChild":{
+			"type": "boolean",
+			"default": false
+		},		
+		"sideTabLayout":{
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "tabs",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

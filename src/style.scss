@@ -1,0 +1,71 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ $orange: #F57814;
+ $black: #333;
+ $light-gray: #bababa;
+ $white: #fff;
+
+.wp-block-create-block-tabs {
+	.tab{
+		&-labels{
+			//border-bottom: 1px solid #ccc;
+			padding-left: 0;
+			.tab-label{
+				display: inline-block;
+				list-style: none;
+				padding: 1em 2em .5em;
+				margin: 2.5px;
+				cursor: pointer;
+				&.active {
+					background-color: $white;
+				}
+				&.active, &:focus, &:hover{
+					color:  $orange;
+					border-bottom:  $orange 4px solid;
+				}
+			}
+			
+		}
+		&-content{
+			.tab-panel{
+				display:none;
+				&.active {
+					display:block;
+				}
+			}
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		&.side-tab-layout{
+			display: flex;
+			width: 100%;
+			.tab-labels{
+				display: flex;
+				flex-direction: column;
+				border-right: solid  $light-gray 1px;
+			}
+			.tab-content{
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				.tab-panel.active{
+					flex: 1;
+					display: flex;
+					flex-direction: column;
+					.wp-block-cgb-block-page-section{
+						flex: 1;
+					}
+					& > *{
+						padding: 0 2rem;
+					}
+				}
+			}
+		}
+	  }
+}//.wp-block-create-block-tabs
+

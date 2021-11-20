@@ -1,0 +1,37 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ //colors
+ $red: red;
+ $light-red: lighten($red, 20%);
+ $green: green;
+ $light-green: lighten($green, 10%);
+ $white: #fff;
+ $gray: rgb(218, 216, 216);
+ $black: #000;
+
+.block-editor-block-list__block.wp-block.wp-block-create-block-tabs {
+	border: 1px dotted  $gray;
+	background: $white;
+	padding: 1em;
+	h2{
+		font-size: 1em;
+	}
+	.wp-block-create-block-tab {
+		background-color:  $gray;
+		padding: 5px;
+		margin-bottom: 1em;
+	}
+    .block-editor-inner-blocks{
+		background-color: $white;
+		h4{
+			font-size: .75em;
+		}
+	}
+	&.has-child-selected{
+		border: solid $red 2px;
+	}
+}
