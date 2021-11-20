@@ -21,13 +21,14 @@
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
 function create_block_tabs_block_init() {
+	var_dump(__FILE__);
 	register_block_type( __DIR__ , array(
 		'render_callback' => function ( $attribs, $content ){
 			if( !is_admin() ) {
 
 				wp_enqueue_script(
 					'tabs-frontend',
-					plugins_url('/tabs/assets/frontend.js', dirname(__FILE__) ),
+					plugins_url('assets/frontend.js', __FILE__),
 				);
 
 				return $content;
