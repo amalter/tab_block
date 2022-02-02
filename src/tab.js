@@ -99,7 +99,7 @@ registerBlockType( 'create-block/tab', {
 		} = props;
 
 		return (
-			<div className="tab-panel" role="tabpanel" tabindex="0" aria-labelledby={tabLabel}>
+			<div className="tab-panel" role="tabpanel" tabindex="0">
 					<InnerBlocks.Content />
 			</div>
 		);
