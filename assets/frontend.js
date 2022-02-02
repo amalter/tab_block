@@ -27,20 +27,20 @@ window.onload = function() {
                 var activePanel = tabBlock.querySelector('.tab-panel.active');
                 
                 activeTab.classList.remove('active');
-                activeTab.setAttribute('tabindex', -1);
+                activeTab.setAttribute('tabindex', 0);
                 activeTab.setAttribute('aria-selected', false);
 
                 label.classList.add('active');
-                label.setAttribute('tabindex', 0);
+                label.setAttribute('tabindex', -1);
                 label.setAttribute('aria-selected', true);
 
                 activePanel.classList.remove('active');
-                activePanel.setAttribute('tabindex', -1);
+                activePanel.setAttribute('tabindex', 0);
                 activePanel.setAttribute('aria-selected', false);
                 activePanel.setAttribute('hidden', true);
 
                 tabPanels[i].classList.add('active');    
-                tabPanels[i].setAttribute('tabindex', 0);
+                tabPanels[i].setAttribute('tabindex', -1);
                 tabPanels[i].setAttribute('aria-selected', true);
                 tabPanels[i].removeAttribute('hidden');
         }
